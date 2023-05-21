@@ -60,28 +60,28 @@
     <h1>Diabetes Prediction API</h1>
     <form action="/predict_api" method="POST">
         <label for="pregnancies">Pregnancies:</label>
-        <input type="number" id="pregnancies" name="pregnancies" required>
+        <input type="number" id="pregnancies" name="pregnancies" required value="{{ request.form.pregnancies }}">
         
         <label for="glucose">Glucose:</label>
-        <input type="number" id="glucose" name="glucose" required>
+        <input type="number" id="glucose" name="glucose" required value="{{ request.form.glucose }}">
         
         <label for="bloodPressure">Blood Pressure:</label>
-        <input type="number" id="bloodPressure" name="bloodPressure" required>
+        <input type="number" id="bloodPressure" name="bloodPressure" required value="{{ request.form.bloodPressure }}">
         
         <label for="skinThickness">Skin Thickness:</label>
-        <input type="number" id="skinThickness" name="skinThickness" required>
+        <input type="number" id="skinThickness" name="skinThickness" required value="{{ request.form.skinThickness }}">
         
         <label for="insulin">Insulin:</label>
-        <input type="number" id="insulin" name="insulin" required>
+        <input type="number" id="insulin" name="insulin" required value="{{ request.form.insulin }}">
         
         <label for="bmi">BMI:</label>
-        <input type="number" id="bmi" name="bmi" step="0.01" required>
+        <input type="number" id="bmi" name="bmi" step="0.01" required value="{{ request.form.bmi }}">
         
         <label for="dpf">Diabetes Pedigree Function:</label>
-        <input type="number" id="dpf" name="dpf" step="0.001" required>
+        <input type="number" id="dpf" name="dpf" step="0.001" required value="{{ request.form.dpf }}">
         
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
+        <input type="number" id="age" name="age" required value="{{ request.form.age }}">
         
         <input type="submit" value="Predict">
     </form>
